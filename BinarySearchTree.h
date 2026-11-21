@@ -153,7 +153,7 @@ class BinarySearchTree {
     public:
         BinarySearchTree();
         void insert(int value);
-        bool search(int value);
+        bool search(int value); //If function returns true, then that means the int value is found in the BST, if false then that means that the value isn't found in the BST
         bool deleteValue(int value); //return false if value not found
         void displayInorder();
         void displayPreorder();

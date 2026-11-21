@@ -33,7 +33,7 @@ void BinarySearchTree::displayPostorder() {
 
 int BinarySearchTree::findMin() {
     if (root == nullptr) {
-        throw runtime_error("Empty array");
+        throw runtime_error("Empty array so cannot run findMin()");
     }
     Node* current = root;
     while (current->left) {
@@ -45,7 +45,7 @@ int BinarySearchTree::findMin() {
 
 int BinarySearchTree::findMax() {
     if (root == nullptr) {
-        throw runtime_error("Empty array");
+        throw runtime_error("Empty array so cannot run findMax()");
     }
     Node* current = root; 
     while(current->right) {
@@ -55,10 +55,10 @@ int BinarySearchTree::findMax() {
 }
 
 void BinarySearchTree::balanceTree() {
-    vector<int> sorted;
-    inSortedOrder(root, sorted);
+    vector<int> nodes;
+    inSortedOrder(root, nodes);
     destroyTree(root);
-    root = buildBalancedTree(sorted, 0, sorted.size() - 1);
+    root = buildBalancedTree(nodes, 0, nodes.size() - 1);
 }
 
 void BinarySearchTree::saveTree(string fname) {
